@@ -1,13 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Layout} from "antd";
 import AppRouter from "./components/AppRouter";
+import './App.css';
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="App">
-      <AppRouter />
-    </div>
+    <Layout>
+      <Header />
+      <Layout.Content>
+        <AppRouter />
+      </Layout.Content>
+      <Layout.Footer>
+        Footer
+      </Layout.Footer>
+    </Layout>
   );
 }
 
