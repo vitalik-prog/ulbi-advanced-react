@@ -1,6 +1,6 @@
 import Login from "../pages/Login";
 import Events from "../pages/Events";
-import {RoutesType} from "../types/routes";
+import {RoutesType} from "../common/types/routes";
 import {RoutesNames} from "../enums/routes";
 
 export const publicRoutes: RoutesType[] = [
