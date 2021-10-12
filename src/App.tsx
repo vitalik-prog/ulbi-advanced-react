@@ -6,12 +6,12 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <Layout>
+    <Layout style={{ minHeight: "100vh" }}>
       <Header />
       <Layout.Content>
         <AppRouter />
       </Layout.Content>
-      <Layout.Footer>
+      <Layout.Footer style={{ textAlign: "center" }}>
         Footer
       </Layout.Footer>
     </Layout>
