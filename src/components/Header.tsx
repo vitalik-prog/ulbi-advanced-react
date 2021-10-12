@@ -1,13 +1,16 @@
 import React, {FC} from 'react';
-import {Layout, Menu, Row} from "antd";
+import {Layout, Menu} from "antd";
 import {useHistory} from 'react-router-dom'
 import {RoutesNames} from "../enums/routes";
 import styles from './styles.module.css';
 import {useTypedSelector} from "../hooks/useTypedSelector";
+import {useActions} from "../hooks/useActions";
 
 const Header: FC = () => {
   const router = useHistory()
-  const { isAuth } = useTypedSelector(state => state.auth)
+  const { isAuth, user } = useTypedSelector(state => state.auth)
+  const { logout } = useActions()
+
   return (
     <Layout.Header
       style={{ color: "white" }}
@@ -23,11 +26,11 @@ const Header: FC = () => {
           className={styles.user_nickname}
           key={2}
         >
-          I am
+          { user.username }
         </Menu.Item>}
         <Menu.Item
           onClick={
-            isAuth ? () => console.log('Logout') : () => router.push(RoutesNames.LOGIN)
+            isAuth ? () => logout() : () => router.push(RoutesNames.LOGIN)
           }
           key={1}
         >
