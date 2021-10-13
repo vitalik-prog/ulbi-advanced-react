@@ -1,5 +1,5 @@
-import {AuthActions, AuthStateType} from "../../common/types/state";
-import {AuthActionsEnum} from "../../enums/store";
+import {AuthActions, AuthStateType} from "../../common/types/state/auth";
+import {AuthActionsEnum} from "../../enums/state";
 import {UserType} from "../../common/types/user";
 
 const initialState: AuthStateType = {

@@ -5,3 +5,7 @@ export enum AuthActionsEnum {
   SET_IS_LOADING = "SET_IS_LOADING"
 }
 
+export enum EventsActionsEnum {
+  SET_GUESTS = "SET_GUESTS",
+  SET_EVENTS = "SET_EVENTS",
+}

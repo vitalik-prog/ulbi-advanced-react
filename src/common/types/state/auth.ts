@@ -1,5 +1,5 @@
 import {store} from "../../../store";
-import {AuthActionsEnum} from "../../../enums/store";
+import {AuthActionsEnum} from "../../../enums/state";
 import {UserType} from "../user";
 
 export type RootState = ReturnType<typeof store.getState>
